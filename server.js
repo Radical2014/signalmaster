@@ -3,7 +3,7 @@ var yetify = require('yetify'),
     config = require('getconfig'),
     uuid = require('node-uuid'),
     crypto = require('crypto'),
-    port = parseInt(process.env.PORT || config.server.port, 10),
+    port = parseInt(config.server.port, 10),
     io = require('socket.io').listen(port);
 
 if (config.logLevel) {
